@@ -84,9 +84,6 @@ class ViewController(BaseController):
             h.flash_notice(
                 _('A harvest job has already been scheduled for ' 'this source')
             )
-        except Exception as e:
-            msg = 'An error occurred: [%s]' % str(e)
-            h.flash_error(msg)
 
         h.redirect_to(h.url_for('{0}_admin'.format(DATASET_TYPE_NAME), id=id))
 

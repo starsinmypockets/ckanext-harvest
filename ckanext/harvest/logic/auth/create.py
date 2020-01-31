@@ -28,6 +28,7 @@ def harvest_job_create(context, data_dict):
     '''
     model = context['model']
     source_id = data_dict['source_id']
+    data_dict['id'] = source_id
 
     pkg = model.Package.get(source_id)
     if not pkg:
